@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+function abc(){
+var x = document.frm1.t1.value;
+var y = document.frm1.t2.value;
+if(x=="afshan" && y=="Afshan123"){
+window.location.href="b.html";
+}
+else{
+alert("invalid username");
+}
+}
+</script>
+ <form name="frm1" method="post">
+            <label>Usrename</label> &nbsp;
+            <input type="text" name="t1" maxlength="8" /><br/><br/>
+            <label for="t2">Password</label>&nbsp;
+            <input type="password" name="t2" id="t2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/><br/><br/>
+            <input type="button" value="Login" onclick="abc()">
+        </form>
+</body>
+</html>
